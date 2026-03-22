@@ -11,6 +11,12 @@ function addTask() {
         let span = document.createElement('span');
         span.innerHTML = '\u00d7';
         li.appendChild(span);
+        
     }
     inputField.value = '';
-}
+    listContainer.addEventListener('click', function(e) {
+    if(e.target.tagName === 'SPAN') {
+        e.target.parentElement.remove();
+    }
+
+});}
